@@ -3,10 +3,7 @@ services:
     image: prom/prometheus
     container_name: prometheus-monitor
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - /data/coolify/applications/tkog00kogs0wgo0g8sc4so0w/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
     restart: always
-
-volumes:
-  grafana-data:
