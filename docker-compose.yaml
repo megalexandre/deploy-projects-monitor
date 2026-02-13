@@ -8,16 +8,5 @@ services:
       - "9090:9090"
     restart: always
 
-  grafana:
-    image: grafana/grafana
-    container_name: grafana-monitor
-    ports:
-      - "3000:3000"
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
-    volumes:
-      - grafana-data:/var/lib/grafana
-    restart: always
-
 volumes:
   grafana-data:
